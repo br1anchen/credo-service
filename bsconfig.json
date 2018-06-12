@@ -1,7 +1,11 @@
 {
   "name": "reason-scripts",
   "sources": ["src"],
-  "bs-dependencies": ["reason-react", "@glennsl/bs-jest"],
+  "bs-dependencies": [
+    "reason-react",
+    "@glennsl/bs-jest",
+    "@jsiebern/bs-material-ui"
+  ],
   "reason": {
     "react-jsx": 2
   },
@@ -11,5 +15,6 @@
     "module": "es6",
     "in-source": true
   },
+  "ppx-flags": ["./node_modules/@jsiebern/bs-material-ui/ppx_withStyles"],
   "suffix": ".bs.js"
 }
