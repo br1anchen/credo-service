@@ -20,7 +20,9 @@
     "@glennsl/bs-jest": "^0.4.2",
     "@jsiebern/bs-material-ui": "^0.3.0-beta.6",
     "apollo-server": "^2.0.0-rc.3",
+    "dotenv": "^6.0.0",
     "graphql": "^0.13.2",
+    "mongoose": "^5.2.6",
     "nodemon": "^1.17.5",
     "reason-react": "^0.4.2"
   }
