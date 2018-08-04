@@ -5,13 +5,15 @@ const QueryType = gql`
   type Query {
     songs: [Song!]!
     song(id: String!): Song
+    songByName(name: String!): Song
   }
 `;
 
 const QueryResolver = {
   Query: {
     songs: () => Song.find(),
-    song: (_, { id }) => Song.findById(id)
+    song: (_, { id }) => Song.findById(id),
+    songByName: (_, { name }) => Song.where({ name }).findOne()
   }
 };
 
