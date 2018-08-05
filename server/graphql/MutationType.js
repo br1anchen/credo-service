@@ -5,6 +5,7 @@ const MutationType = gql`
   type Mutation {
     addSong(name: String!, lang: String!, lyrics: [String!]!): Song
     updateLyrics(name: String!, lang: String!, lyrics: [String!]!): Song
+    updateSongInfo(id: String!, name: String!, lang: String!): Song
   }
 `;
 
@@ -16,6 +17,9 @@ const MutationResolver = {
     },
     updateLyrics: (_, { name, lang, lyrics }) => {
       return Song.where({ name, lang }).findOneAndUpdate({ lyrics });
+    },
+    updateSongInfo: (_, { id, name, lang }) => {
+      return Song.findByIdAndUpdate(id, { name, lang });
     }
   }
 };
