@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@material-ui/core": "^1.2.1",
+    "@material-ui/core": "^3.0.2",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
     "reason-scripts": "0.9.0"
@@ -17,13 +17,14 @@
     "prepare": "npm link bs-platform"
   },
   "devDependencies": {
+    "bs-platform": "^4.0.5",
     "@glennsl/bs-jest": "^0.4.2",
-    "@jsiebern/bs-material-ui": "^0.3.0-beta.6",
-    "apollo-server": "^2.0.0-rc.3",
+    "@jsiebern/bs-material-ui": "^0.4.0",
+    "apollo-server": "^2.0.7",
     "dotenv": "^6.0.0",
-    "graphql": "^0.13.2",
+    "graphql": "^14.0.2",
     "mongoose": "^5.2.6",
     "nodemon": "^1.17.5",
-    "reason-react": "^0.4.2"
+    "reason-react": "^0.5.3"
   }
 }
