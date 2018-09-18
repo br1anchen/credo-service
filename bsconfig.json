@@ -4,7 +4,8 @@
   "bs-dependencies": [
     "reason-react",
     "@glennsl/bs-jest",
-    "@jsiebern/bs-material-ui"
+    "@jsiebern/bs-material-ui",
+    "reason-apollo"
   ],
   "reason": {
     "react-jsx": 2
@@ -15,6 +16,9 @@
     "module": "es6",
     "in-source": true
   },
-  "ppx-flags": ["./node_modules/@jsiebern/bs-material-ui/ppx_withStyles"],
+  "ppx-flags": [
+    "./node_modules/@jsiebern/bs-material-ui/ppx_withStyles",
+    "graphql_ppx/ppx"
+  ],
   "suffix": ".bs.js"
 }

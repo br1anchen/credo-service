@@ -4,9 +4,20 @@
   "private": true,
   "dependencies": {
     "@material-ui/core": "^3.0.2",
+    "apollo-cache-inmemory": "^1.2.10",
+    "apollo-client": "^2.4.2",
+    "apollo-link": "^1.2.3",
+    "apollo-link-context": "^1.0.9",
+    "apollo-link-error": "^1.1.1",
+    "apollo-link-http": "^1.5.5",
+    "apollo-link-ws": "^1.0.9",
+    "graphql-tag": "^2.9.2",
     "react": "^16.4.0",
+    "react-apollo": "^2.1.11",
     "react-dom": "^16.4.0",
-    "reason-scripts": "0.9.0"
+    "reason-apollo": "^0.13.0",
+    "reason-scripts": "br1anchen/reason-scripts",
+    "subscriptions-transport-ws": "^0.9.14"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -17,12 +28,13 @@
     "prepare": "npm link bs-platform"
   },
   "devDependencies": {
-    "bs-platform": "^4.0.5",
     "@glennsl/bs-jest": "^0.4.2",
-    "@jsiebern/bs-material-ui": "^0.4.0",
+    "@jsiebern/bs-material-ui": "^0.4.0-beta.1",
     "apollo-server": "^2.0.7",
+    "bs-platform": "^4.0.5",
     "dotenv": "^6.0.0",
     "graphql": "^14.0.2",
+    "graphql_ppx": "^0.2.7",
     "mongoose": "^5.2.6",
     "nodemon": "^1.17.5",
     "reason-react": "^0.5.3"
