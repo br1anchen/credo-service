@@ -3,7 +3,7 @@ const Song = require('../models/Song');
 
 const QueryType = gql`
   type Query {
-    songs: [Song!]!
+    allSongs: [Song!]!
     song(id: String!): Song
     songByName(name: String!): Song
   }
@@ -11,13 +11,13 @@ const QueryType = gql`
 
 const QueryResolver = {
   Query: {
-    songs: () => Song.find(),
+    allSongs: () => Song.find(),
     song: (_, { id }) => Song.findById(id),
-    songByName: (_, { name }) => Song.where({ name }).findOne()
-  }
+    songByName: (_, { name }) => Song.where({ name }).findOne(),
+  },
 };
 
 module.exports = {
   QueryType,
-  QueryResolver
+  QueryResolver,
 };

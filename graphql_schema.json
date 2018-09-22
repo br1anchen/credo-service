@@ -15,7 +15,7 @@
           "description": "",
           "fields": [
             {
-              "name": "songs",
+              "name": "allSongs",
               "description": "",
               "args": [],
               "type": {

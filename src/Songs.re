@@ -2,8 +2,8 @@ let ste = ReasonReact.string;
 
 module GetAllSongs = [%graphql
   {|
-    query getAllSongs {
-      songs {
+    query getAllSongs{
+      allSongs {
         id
         name
       }
@@ -27,7 +27,7 @@ let make = _children => {
              | Data(response) =>
                <MaterialUi.List>
                  (
-                   response##songs
+                   response##allSongs
                    |> Array.mapi((index, song) =>
                         <MaterialUi.ListItem
                           key=(index |> string_of_int) button=true>
