@@ -1,7 +1,8 @@
-[%bs.raw {|require('./index.css')|}];
+open Utils;
 
-[@bs.module "./registerServiceWorker"]
-external register_service_worker : unit => unit = "default";
+requireCSS("./index.css");
+
+registerServiceWorker();
 
 ReactDOMRe.renderToElementWithId(
   <ReasonApollo.Provider client=Client.instance>
@@ -9,5 +10,3 @@ ReactDOMRe.renderToElementWithId(
   </ReasonApollo.Provider>,
   "root",
 );
-
-register_service_worker();
