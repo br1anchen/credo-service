@@ -14,6 +14,7 @@
 /types
 .merlin
 *.bs.js
+.graphql_ppx_cache/
 
 # misc
 .DS_Store
@@ -27,3 +28,7 @@ yarn-debug.log*
 yarn-error.log*
 
 .env
+.nvmrc
+
+#editor
+.vscode/
