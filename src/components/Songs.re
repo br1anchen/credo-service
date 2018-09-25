@@ -1,17 +1,6 @@
+open GetAllSongsQuery;
+
 let ste = ReasonReact.string;
-
-module GetAllSongs = [%graphql
-  {|
-    query getAllSongs {
-      allSongs {
-        id
-        name
-      }
-    }
-  |}
-];
-
-module GetAllSongsQuery = ReasonApollo.CreateQuery(GetAllSongs);
 
 let component = ReasonReact.statelessComponent("Songs");
 
