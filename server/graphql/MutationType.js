@@ -1,5 +1,6 @@
 const { gql } = require('apollo-server');
 const Song = require('../models/Song');
+const { addSongObject } = require('../algolia');
 
 const MutationType = gql`
   type Mutation {
@@ -13,6 +14,7 @@ const MutationResolver = {
   Mutation: {
     addSong: (_, { name, lang, lyrics }) => {
       const song = new Song({ name, lang, lyrics });
+      addSongObject({ name, lang, lyrics });
       return song.save();
     },
     updateLyrics: (_, { name, lang, lyrics }) => {
@@ -20,11 +22,11 @@ const MutationResolver = {
     },
     updateSongInfo: (_, { id, name, lang }) => {
       return Song.findByIdAndUpdate(id, { name, lang });
-    }
-  }
+    },
+  },
 };
 
 module.exports = {
   MutationType,
-  MutationResolver
+  MutationResolver,
 };
