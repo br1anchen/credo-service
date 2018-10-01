@@ -1,5 +1,6 @@
 {
   "name": "reason-scripts",
+  "generate-merlin": true,
   "sources": [
     {
       "dir": "src",
@@ -10,7 +11,10 @@
     "reason-react",
     "@glennsl/bs-jest",
     "@jsiebern/bs-material-ui",
-    "reason-apollo"
+    "reason-apollo",
+    "vrroom",
+    "@glennsl/rebase",
+    "@glennsl/bs-json"
   ],
   "reason": {
     "react-jsx": 2

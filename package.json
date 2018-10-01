@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@material-ui/core": "^3.0.2",
+    "@glennsl/bs-json": "^3.0.0",
+    "@glennsl/rebase": "^0.2.1",
+    "@material-ui/core": "^3.1.1",
     "algoliasearch": "^3.30.0",
     "algoliasearch-helper": "^2.26.1",
     "apollo-cache-inmemory": "^1.2.10",
@@ -19,7 +21,8 @@
     "react-dom": "^16.4.0",
     "reason-apollo": "^0.13.0",
     "reason-scripts": "br1anchen/reason-scripts",
-    "subscriptions-transport-ws": "^0.9.14"
+    "subscriptions-transport-ws": "^0.9.14",
+    "vrroom": "glennsl/vrroom"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -31,7 +34,7 @@
   },
   "devDependencies": {
     "@glennsl/bs-jest": "^0.4.2",
-    "@jsiebern/bs-material-ui": "^0.4.0-beta.1",
+    "@jsiebern/bs-material-ui": "0.4.0-beta.1",
     "apollo-server": "^2.0.7",
     "bs-platform": "^4.0.5",
     "dotenv": "^6.0.0",

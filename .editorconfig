@@ -4,11 +4,11 @@ end_of_line = lf
 insert_final_newline = true
 
 # Set default charset
-[*.js]
+[{.js, .re}]
 charset = utf-8
 
 # 2 space indentation
-[*.js]
+[{.js, .re}]
 indent_style = space
 indent_size = 2
 
