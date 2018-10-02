@@ -11,36 +11,25 @@ const searchConfig = {
 const client = algoliasearch(searchConfig.appId, searchConfig.apiKey);
 const index = client.initIndex(searchConfig.indexName);
 
-const getObjectID = name => name.toLowerCase().replace(' ', '_');
+const songDB2SearchObject = ({ name, lang, lyrics, _id: dbID }) => ({
+  name,
+  lang,
+  lyrics,
+  dbID,
+});
 
 exports.initSongsSearch = songs => {
-  index.addObjects(
-    songs.map(({ name, lang, lyrics }) => {
-      return {
-        name,
-        lang,
-        lyrics,
-        objectID: getObjectID(name),
-      };
-    }),
-    (err, content) => {
-      if (err) throw err;
+  index.addObjects(songs.map(songDB2SearchObject), (err, content) => {
+    if (err) throw err;
 
-      console.log(content);
-    }
-  );
+    console.log(content);
+  });
 };
 
 exports.addSongObject = song => {
-  index.addObject(
-    {
-      ...song,
-      objectID: getObjectID(name),
-    },
-    (err, content) => {
-      if (err) throw err;
+  index.addObject(songDB2SearchObject(song), (err, content) => {
+    if (err) throw err;
 
-      console.log(content);
-    }
-  );
+    console.log(content);
+  });
 };
